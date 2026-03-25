@@ -18,13 +18,13 @@ export function ProfileSection({ name, bio, imageUrl }: ProfileSectionProps) {
         <div
           className="relative h-24 w-24 overflow-hidden rounded-full"
           style={{
-            background: "rgba(255, 255, 255, 0.5)",
+            background: "var(--card-glass)",
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
             boxShadow: `
-              inset 0 2px 4px rgba(255, 255, 255, 0.8),
-              0 0 0 2px rgba(255, 255, 255, 0.6),
-              0 4px 16px rgba(0, 0, 0, 0.1),
+              inset 0 2px 4px rgba(255, 255, 255, 0.3),
+              0 0 0 2px var(--card-border),
+              0 4px 16px var(--card-shadow-color),
               0 12px 32px rgba(120, 119, 198, 0.15)
             `,
           }}
@@ -44,8 +44,8 @@ export function ProfileSection({ name, bio, imageUrl }: ProfileSectionProps) {
         />
       </motion.div>
 
-      <h1 className="mt-5 text-xl font-semibold tracking-tight text-gray-800">{name}</h1>
-      <p className="mt-2 text-sm text-gray-500">{bio}</p>
+      <h1 className="mt-5 text-xl font-semibold tracking-tight" style={{ color: "var(--profile-text)" }}>{name}</h1>
+      <p className="mt-2 text-sm" style={{ color: "var(--profile-sub)" }}>{bio}</p>
     </div>
   )
 }
