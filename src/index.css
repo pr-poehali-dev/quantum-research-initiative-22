@@ -82,5 +82,37 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow: hidden;
+    height: 100dvh;
   }
+
+  #root {
+    height: 100dvh;
+    overflow: hidden;
+  }
+}
+
+/* Leaflet popup dark theme */
+.dark .leaflet-popup-content-wrapper {
+  background: rgba(20, 22, 35, 0.92);
+  color: #e8eaf2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  backdrop-filter: blur(16px);
+}
+.dark .leaflet-popup-tip {
+  background: rgba(20, 22, 35, 0.92);
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 14px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Hide scrollbar globally but keep scroll */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+* {
+  scrollbar-width: none;
 }
